@@ -1,0 +1,2 @@
+# mutation probability max mutation amplitute, and in %
+100.0    3.0

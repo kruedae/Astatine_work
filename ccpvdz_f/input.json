@@ -1,0 +1,18 @@
+{
+    "generations"  : 1000,
+    "population_size" : 100,
+    "save_n_best" : 10.0,
+    "fittest_win_probability" : 80.0,
+    "job_type" : 0,
+    "chk_file" : "job_save.txt",
+    "input_basis_file" : "/work/akanane/users/akanane/Relativistic/GA/cc-pVDZ-F-pp_uncontracted.bas",
+    "H_basis_file" : "/work/akanane/users/akanane/Relativistic/GA/H_uccpv5z.bas",
+    "I_basis_file" : "/work/akanane/users/akanane/Relativistic/GA/I_uccpv5z.bas",
+    "AtI_pp_file" : "/work/akanane/users/akanane/Relativistic/GA/AtI_gatchina.pp",
+    "At_pp_file"  : "/work/akanane/users/akanane/Relativistic/GA/At_gatchina.pp",
+    "mutation_file" : "mutate.txt",
+    "mutation_probability" : 100.0,
+    "mutation_magnitude" : 1.0,
+    "mutation_impl" : "gamma",
+    "crossover_impl" : "binary"
+}

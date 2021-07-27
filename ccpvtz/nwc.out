@@ -1,0 +1,507 @@
+ argument  1 = nwc.nw
+                                         
+                                         
+
+
+              Northwest Computational Chemistry Package (NWChem) 6.8
+              ------------------------------------------------------
+
+
+                    Environmental Molecular Sciences Laboratory
+                       Pacific Northwest National Laboratory
+                                Richland, WA 99352
+
+                              Copyright (c) 1994-2018
+                       Pacific Northwest National Laboratory
+                            Battelle Memorial Institute
+
+             NWChem is an open-source computational chemistry package
+                        distributed under the terms of the
+                      Educational Community License (ECL) 2.0
+             A copy of the license is included with this distribution
+                              in the LICENSE.TXT file
+
+                                  ACKNOWLEDGMENT
+                                  --------------
+
+            This software and its documentation were developed at the
+            EMSL at Pacific Northwest National Laboratory, a multiprogram
+            national laboratory, operated for the U.S. Department of Energy
+            by Battelle under Contract Number DE-AC05-76RL01830. Support
+            for this work was provided by the Department of Energy Office
+            of Biological and Environmental Research, Office of Basic
+            Energy Sciences, and the Office of Advanced Scientific Computing.
+
+
+           Job information
+           ---------------
+
+    hostname        = r03n29.localdomain.hpc.udel.edu
+    program         = nwchem
+    date            = Wed Jul 29 18:55:46 2020
+
+    compiled        = Mon_Jun_22_16:48:09_2020
+    source          = /opt/shared/nwchem/6.8.1/src
+    nwchem branch   = Development
+    nwchem revision = N/A
+    ga revision     = 5.6.5
+    use scalapack   = F
+    input           = nwc.nw
+    prefix          = nwc.
+    data base       = /work/akanane/users/akanane/Relativistic/GA/parallel/ccpvtz/nwc.db
+    status          = startup
+    nproc           =        1
+    time left       =     -1s
+
+
+
+           Memory information
+           ------------------
+
+    heap     = 1048575996 doubles =   8000.0 Mbytes
+    stack    = 1048576001 doubles =   8000.0 Mbytes
+    global   = 2097152000 doubles =  16000.0 Mbytes (distinct from heap & stack)
+    total    = 4194303997 doubles =  32000.0 Mbytes
+    verify   = yes
+    hardfail = no 
+
+
+           Directory information
+           ---------------------
+
+  0 permanent = /work/akanane/users/akanane/Relativistic/GA/parallel/ccpvtz
+  0 scratch   = /lustre/scratch/akanane/nwchem/1
+
+
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+  library name resolved from: environment
+  library file name is: </opt/shared/nwchem/6.8.1/data/libraries/>
+  
+                      Basis "ao basis" -> "" (spherical)
+                      -----
+  At (Astatine)
+  -------------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  2.36771558E+03  1.000000
+
+  2 S  3.61920607E+02  1.000000
+
+  3 S  4.01919470E+01  1.000000
+
+  4 S  2.46860618E+01  1.000000
+
+  5 S  1.41417027E+01  1.000000
+
+  6 S  6.25091140E+00  1.000000
+
+  7 S  2.16739250E+00  1.000000
+
+  8 S  1.05855680E+00  1.000000
+
+  9 S  3.67609200E-01  1.000000
+
+ 10 S  1.78507500E-01  1.000000
+
+ 11 S  8.34652000E-02  1.000000
+
+ 12 S  9.55903000E-02  1.000000
+
+ 13 P  1.93087701E+01  1.000000
+
+ 14 P  1.08048736E+01  1.000000
+
+ 15 P  6.58845750E+00  1.000000
+
+ 16 P  2.62670560E+00  1.000000
+
+ 17 P  1.33541610E+00  1.000000
+
+ 18 P  6.61448500E-01  1.000000
+
+ 19 P  3.34258600E-01  1.000000
+
+ 20 P  1.50195300E-01  1.000000
+
+ 21 P  5.87410000E-02  1.000000
+
+ 22 P  5.79391300E-01  1.000000
+
+ 23 P  9.25405000E-02  1.000000
+
+ 24 D  7.10789685E+01  1.000000
+
+ 25 D  1.65499557E+01  1.000000
+
+ 26 D  6.47062210E+00  1.000000
+
+ 27 D  2.85097370E+00  1.000000
+
+ 28 D  1.61246640E+00  1.000000
+
+ 29 D  8.43802200E-01  1.000000
+
+ 30 D  4.06771900E-01  1.000000
+
+ 31 D  1.67896300E-01  1.000000
+
+ 32 F  3.72539500E-01  1.000000
+
+
+
+ Summary of "ao basis" -> "" (spherical)
+ ------------------------------------------------------------------------------
+       Tag                 Description            Shells   Functions and Types
+ ---------------- ------------------------------  ------  ---------------------
+ At                      user specified             32       92   12s11p8d1f
+
+
+  library name resolved from: environment
+  library file name is: </opt/shared/nwchem/6.8.1/data/libraries/>
+  
+                 ECP       "ecp basis" -> "" (cartesian)
+                -----
+  At (Astatine) Replaces    60 electrons
+  --------------------------------------
+             Channel    R-exponent     Exponent     Coefficients
+         ------------ ---------------------------------------------------------
+  1 U L       Both         0.00      525.754846      -0.173059
+  1 U L       Both         1.00     2395.715850      -2.276906
+  1 U L       Both         1.00      278.392187      -3.857969
+  1 U L       Both         1.00       61.458962     -36.770662
+  1 U L       Both         1.00       44.129376      37.601009
+  1 U L       Both         1.00       31.359815     -23.238699
+  1 U L       Both         1.00       11.620573     -16.176532
+  1 U L       Both         1.00        4.446625      -3.261971
+  1 U L       Both         1.00        2.935632       0.180132
+  1 U L       Both         1.00        1.910251      -0.146253
+  1 U L       Both         1.00        0.178868      -0.000306
+  1 U L       Both         1.00        0.018768      -0.000022
+  1 U L       Both         1.00        0.009761      -0.000001
+
+  2 U-s       Both         0.00       78.594234      10.173059
+  2 U-s       Both         1.00       20.707609      53.132769
+  2 U-s       Both         2.00       45.167107     915.704248
+  2 U-s       Both         2.00       30.243749   -1411.543382
+  2 U-s       Both         2.00       20.306371    1849.067583
+  2 U-s       Both         2.00       13.560689   -1518.357864
+  2 U-s       Both         2.00        8.557058    1106.328043
+  2 U-s       Both         2.00        5.419636    -461.892244
+  2 U-s       Both         2.00        3.516909     198.105995
+  2 U-s       Both         2.00        2.287714     -81.896353
+  2 U-s       Both         2.00        1.492833      32.227905
+  2 U-s       Both         2.00        0.974359     -11.458592
+  2 U-s       Both         2.00        0.633560       3.370887
+  2 U-s       Both         2.00        0.410317      -0.726005
+  2 U-s       Both         2.00        0.263860       0.084087
+
+  3 U-p       Both         0.00       77.044856       9.173059
+  3 U-p       Both         1.00      208.029432     -11.921411
+  3 U-p       Both         1.00       28.036479      67.690912
+  3 U-p       Both         2.00       39.868030     362.644345
+  3 U-p       Both         2.00       26.002305    -582.208229
+  3 U-p       Both         2.00       15.965542    1135.430155
+  3 U-p       Both         2.00       11.089072   -1255.187511
+  3 U-p       Both         2.00        8.084023     873.528658
+  3 U-p       Both         2.00        5.150690    -147.543640
+  3 U-p       Both         2.00        2.818771      20.737280
+  3 U-p       Both         2.00        1.590819      -4.949674
+  3 U-p       Both         2.00        0.878982       1.224799
+  3 U-p       Both         2.00        0.479414      -0.318322
+  3 U-p       Both         2.00        0.264399       0.075196
+  3 U-p       Both         2.00        0.157424      -0.011770
+
+  4 U-d       Both         0.00       30.117728       7.173059
+  4 U-d       Both         1.00        9.540744     223.203571
+  4 U-d       Both         1.00        5.932081    -532.676982
+  4 U-d       Both         1.00        3.279986     364.117347
+  4 U-d       Both         2.00        6.384402     470.098427
+  4 U-d       Both         2.00        3.591978    -476.290215
+  4 U-d       Both         2.00        1.790367       1.447964
+  4 U-d       Both         2.00        0.921766      -0.463077
+  4 U-d       Both         2.00        0.485962       0.163733
+  4 U-d       Both         2.00        0.266420      -0.069600
+  4 U-d       Both         2.00        0.150370       0.031881
+  4 U-d       Both         2.00        0.090090      -0.013071
+  4 U-d       Both         2.00        0.051240       0.003831
+  4 U-d       Both         2.00        0.029281      -0.000895
+  4 U-d       Both         2.00        0.016722       0.000119
+
+  5 U-f       Both         0.00        0.891112       4.173059
+  5 U-f       Both         1.00       18.356496      62.551914
+  5 U-f       Both         2.00    32873.554569    1035.415119
+  5 U-f       Both         2.00     3063.446789     192.725071
+  5 U-f       Both         2.00       31.894642    -183.984679
+  5 U-f       Both         2.00        4.214026      69.570454
+  5 U-f       Both         2.00        1.887936    -131.986631
+  5 U-f       Both         2.00        1.332761     223.444177
+  5 U-f       Both         2.00        0.873304    -167.865396
+  5 U-f       Both         2.00        0.632167      71.630825
+  5 U-f       Both         2.00        0.438045     -11.215886
+  5 U-f       Both         2.00        0.261926       0.470906
+  5 U-f       Both         2.00        0.174510       0.000847
+
+  library name resolved from: environment
+  library file name is: </opt/shared/nwchem/6.8.1/data/libraries/>
+  
+
+ **** WARNING Zero Coefficient **** on atom "              At"
+ angular momentum value: 1  standard basis set name: "user specified"
+ input line that generated warning:
+   154: 0	7.704485637704510E+01		0.000000000000000E+00
+  
+
+ **** WARNING Zero Coefficient **** on atom "              At"
+ angular momentum value: 2  standard basis set name: "user specified"
+ input line that generated warning:
+   170: 0	3.011772828438610E+01		0.000000000000000E+00
+  
+
+ **** WARNING Zero Coefficient **** on atom "              At"
+ angular momentum value: 3  standard basis set name: "user specified"
+ input line that generated warning:
+   186: 0	8.911119625038520E-01		0.000000000000000E+00
+  
+
+ **** WARNING Zero Coefficient **** on atom "              At"
+ angular momentum value: 4  standard basis set name: "user specified"
+ input line that generated warning:
+   200: 0	5.257548462769590E+02		0.000000000000000E+00
+  
+             SO Potential "so potential" -> ""
+                      -----
+  At (Astatine)
+  -------------
+          R-exponent    Exponent     Coefficients 
+         ------------ ------------------------------------------------------------
+  1 U-p      1.00      208.029432       2.561177
+  1 U-p      1.00       28.036479      -1.650544
+  1 U-p      2.00       39.868030      77.307362
+  1 U-p      2.00       26.002305    -118.585980
+  1 U-p      2.00       15.965542     138.579485
+  1 U-p      2.00       11.089072     -52.715330
+  1 U-p      2.00        8.084023     -58.916702
+  1 U-p      2.00        5.150690      62.873440
+  1 U-p      2.00        2.818771     -15.889430
+  1 U-p      2.00        1.590819       4.843922
+  1 U-p      2.00        0.878982      -1.405982
+  1 U-p      2.00        0.479414       0.390801
+  1 U-p      2.00        0.264399      -0.095951
+  1 U-p      2.00        0.157424       0.015456
+
+  2 U-d      1.00        9.540744       1.612834
+  2 U-d      1.00        5.932081      -1.350383
+  2 U-d      1.00        3.279986      -0.287663
+  2 U-d      2.00        6.384402      -1.664264
+  2 U-d      2.00        3.591978       4.036069
+  2 U-d      2.00        1.790367      -0.890782
+  2 U-d      2.00        0.921766       0.301059
+  2 U-d      2.00        0.485962      -0.123316
+  2 U-d      2.00        0.266420       0.057045
+  2 U-d      2.00        0.150370      -0.027051
+  2 U-d      2.00        0.090090       0.011366
+  2 U-d      2.00        0.051240      -0.003367
+  2 U-d      2.00        0.029281       0.000795
+  2 U-d      2.00        0.016722      -0.000104
+
+  3 U-f      1.00       18.356496      -0.000643
+  3 U-f      2.00    32873.554569       0.834481
+  3 U-f      2.00     3063.446789       0.273486
+  3 U-f      2.00       31.894642       0.160633
+  3 U-f      2.00        4.214026      -0.068824
+  3 U-f      2.00        1.887936       0.022494
+  3 U-f      2.00        1.332761      -0.174753
+  3 U-f      2.00        0.873304       0.160803
+  3 U-f      2.00        0.632167       0.036072
+  3 U-f      2.00        0.438045      -0.065269
+  3 U-f      2.00        0.261926       0.016437
+  3 U-f      2.00        0.174510      -0.002626
+
+  4 U-g      1.00     2395.715850      -1.527919
+  4 U-g      1.00      278.392187      -3.033005
+  4 U-g      1.00       61.458962       2.574144
+  4 U-g      1.00       44.129376      -2.630667
+  4 U-g      1.00       31.359815       1.110494
+  4 U-g      1.00       11.620573      -0.051219
+  4 U-g      1.00        4.446625       0.042132
+  4 U-g      1.00        2.935632      -0.036158
+  4 U-g      1.00        1.910251       0.008870
+  4 U-g      1.00        0.178868       0.000099
+  4 U-g      1.00        0.018768       0.000004
+  4 U-g      1.00        0.009761      -0.000000
+
+                                        At
+                                        --
+
+ Scaling coordinates for geometry "geometry" by  1.889725989
+ (inverse scale =  0.529177249)
+
+
+
+                             Geometry "geometry" -> ""
+                             -------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 At                  85.0000     0.00000000     0.00000000     0.00000000
+
+      Atomic Mass 
+      ----------- 
+
+      At               210.987500
+
+
+ Effective nuclear repulsion energy (a.u.)       0.0000000000
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+     0.0000000000     0.0000000000     0.0000000000
+
+
+            XYZ format geometry
+            -------------------
+     1
+ geometry
+ At                    0.00000000     0.00000000     0.00000000
+
+  xc_inp: hfexch multiplicative factor not found.
+
+                                 NWChem DFT Module
+                                 -----------------
+
+
+                                        At
+
+
+
+
+ Summary of "ao basis" -> "ao basis" (spherical)
+ ------------------------------------------------------------------------------
+       Tag                 Description            Shells   Functions and Types
+ ---------------- ------------------------------  ------  ---------------------
+ At                      user specified             32       92   12s11p8d1f
+
+
+  Caching 1-el integrals 
+
+            General Information
+            -------------------
+          SCF calculation type: DFT
+          Wavefunction type:  spin polarized.
+          No. of atoms     :     1
+          No. of electrons :    25
+           Alpha electrons :    13
+            Beta electrons :    12
+          Charge           :     0
+          Spin multiplicity:     2
+          Use of symmetry is: off; symmetry adaption is: off
+          Maximum number of iterations: 100
+          AO basis - number of functions:    92
+                     number of shells:    32
+          Convergence on energy requested:  1.00D-06
+          Convergence on density requested:  5.00D-06
+          Convergence on gradient requested:  5.00D-06
+
+              XC Information
+              --------------
+                     Hartree-Fock (Exact) Exchange  1.000          
+
+          Convergence Information
+          -----------------------
+          Convergence aids based upon iterative change in 
+          total energy or number of iterations. 
+          Levelshifting, if invoked, occurs when the 
+          HOMO/LUMO gap drops below (HL_TOL):  1.00D-02
+          DIIS, if invoked, will attempt to extrapolate 
+          using up to (NFOCK): 10 stored Fock matrices.
+
+                    Damping( 0%)  Levelshifting(0.5)       DIIS
+                  --------------- ------------------- ---------------
+          dE  on:    start            ASAP                start   
+          dE off:    2 iters        100 iters           100 iters 
+
+
+      Screening Tolerance Information
+      -------------------------------
+          Density screening/tol_rho:  1.00D-10
+          AO Gaussian exp screening on grid/accAOfunc:  14
+          CD Gaussian exp screening on grid/accCDfunc:  20
+          XC Gaussian exp screening on grid/accXCfunc:  20
+          Schwarz screening/accCoul:  1.00D-10
+
+ Performing spin-orbit DFT (SO-DFT) calculations
+ -----------------------------------------------
+
+
+      Superposition of Atomic Density Guess
+      -------------------------------------
+
+ Sum of atomic energies:        -302.61999151
+
+      Non-variational initial energy
+      ------------------------------
+
+ Total energy =    -261.470726
+ 1-e energy   =    -454.447197
+ 2-e energy   =     192.976471
+ HOMO         =      -0.323767
+ LUMO         =       0.106132
+
+   Time prior to 1st pass:      0.4
+
+ Integral file          = /lustre/scratch/akanane/nwchem/1/nwc.aoints.0
+ Record size in doubles =    65536    No. of integs per rec  =    43688
+ Max. records in memory =      287    Max. records in file   = ********
+ No. of bits per label  =        8    No. of bits per value  =       64
+
+
+ #quartets = 1.396D+05 #integrals = 1.092D+06 #direct =  0.0% #cached =100.0%
+
+
+           Memory utilization after 1st SCF pass: 
+           Heap Space remaining (MW):     1029.75          1029745172
+          Stack Space remaining (MW):     1048.51          1048505700
+
+   convergence    iter        energy       DeltaE   RMS-Dens  Diis-err    time
+ ---------------- ----- ----------------- --------- --------- ---------  ------
+ d= 0,ls=0.0,diis     1   -261.6076556133 -2.62D+02  1.13D-02  6.48D+00     0.8
+                                                     1.15D-02  6.48D+00
+ d= 0,ls=0.0,diis     2   -261.9222436510 -3.15D-01  1.35D-03  6.60D-02     0.9
+                                                     1.34D-03  6.60D-02
+ d= 0,ls=0.0,diis     3   -261.9386600775 -1.64D-02  3.79D-04  3.84D-03     1.1
+                                                     4.93D-04  3.84D-03
+ d= 0,ls=0.0,diis     4   -261.9449306626 -6.27D-03  2.99D-04  2.07D-03     1.2
+                                                     4.69D-04  2.07D-03
+ d= 0,ls=0.0,diis     5   -261.9490012373 -4.07D-03  6.47D-04  1.09D-03     1.4
+                                                     9.74D-04  1.09D-03
+ d= 0,ls=0.0,diis     6   -261.9530389102 -4.04D-03  1.72D-04  1.42D-04     1.6
+                                                     2.16D-04  1.42D-04
+ d= 0,ls=0.0,diis     7   -261.9532864621 -2.48D-04  1.34D-04  2.43D-05     1.8
+                                                     1.74D-04  2.43D-05
+ d= 0,ls=0.0,diis     8   -261.9533782387 -9.18D-05  3.16D-05  7.42D-06     1.9
+                                                     3.89D-05  7.42D-06
+ d= 0,ls=0.0,diis     9   -261.9534055962 -2.74D-05  4.05D-05  5.77D-06     2.1
+                                                     4.70D-05  5.77D-06
+ d= 0,ls=0.0,diis    10   -261.9534458184 -4.02D-05  2.07D-04  5.02D-06     2.3
+                                                     2.42D-04  5.02D-06
+ d= 0,ls=0.0,diis    11   -261.9536037114 -1.58D-04  2.38D-05  2.21D-06     2.5
+                                                     2.25D-05  2.21D-06
+ d= 0,ls=0.0,diis    12   -261.9536142235 -1.05D-05  1.31D-04  1.45D-06     2.6
+                                                     1.37D-04  1.45D-06
+ d= 0,ls=0.0,diis    13   -261.9536478289 -3.36D-05  1.86D-05  7.50D-07     2.8
+                                                     2.03D-05  7.50D-07
+ d= 0,ls=0.0,diis    14   -261.9536495166 -1.69D-06  1.28D-05  1.62D-07     3.0
+                                                     1.31D-05  1.62D-07
+ d= 0,ls=0.0,diis    15   -261.9536502437 -7.27D-07  5.91D-06  8.78D-08     3.1
+                                                     2.46D-06  8.78D-08
+ d= 0,ls=0.0,diis    16   -261.9536506480 -4.04D-07  1.27D-06  8.61D-08     3.3
+                                                     4.85D-07  8.61D-08
