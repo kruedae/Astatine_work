@@ -56,8 +56,8 @@ def main():
    cal_dir          = os.getcwd()
    # Create scratch directories to perform the calculations
 # CREATE A NEW DIRECTORY FOR EACH CALCULATION (14)
-   scratch_dir1      = "/lustre/scratch/akanane/nwchem/1"
-   scratch_dir2      = "/lustre/scratch/akanane/nwchem/2"
+   scratch_dir1      = "/lustre/scratch/kruedae/nwchem/1"
+   scratch_dir2      = "/lustre/scratch/kruedae/nwchem/2"
    scratch_dir3      = "/lustre/scratch/akanane/nwchem/3"
    scratch_dir4      = "/lustre/scratch/akanane/nwchem/4"
    scratch_dir5      = "/lustre/scratch/akanane/nwchem/5"
@@ -160,7 +160,7 @@ def main():
    # read H and I basis sets and pseudopotential
    # 
    H_basis = basis.read_atom_basis(H_basis_file)
-   AtI_pp  = basis.read_pseudopotential(AtI_pp_file)  
+   #AtI_pp  = basis.read_pseudopotential(AtI_pp_file)  
 
    #
    # clone input basis into n_ind 
@@ -183,9 +183,10 @@ def main():
       fo.write(" Current generation size %d \n"%(n_cur_gen))
 
       errors = np.zeros((n_cur_gen))
-      error_At  = np.zeros((n_cur_gen))
-      error_Atp = np.zeros((n_cur_gen))
-      error_Atn = np.zeros((n_cur_gen))
+      error_At2  = np.zeros((n_cur_gen, R_At2))
+      error_HAt  = np.zeros((n_cur_gen, R_HAt))
+      #error_Atp = np.zeros((n_cur_gen))
+      #error_Atn = np.zeros((n_cur_gen))
 
       ips = np.zeros((n_cur_gen))
       eas = np.zeros((n_cur_gen))
@@ -290,20 +291,22 @@ def main():
 
 	 if nwtotalfail:
             n_failed += 1 
-
-         errors[n]  = np.abs(E_At  - E_out_at) 
-         errors[n] += np.abs(E_Atp - E_out_atp) 
-         errors[n] += np.abs(E_Atn - E_out_atn)
-
-         error_At[n]  = Ha_to_eV*np.abs(E_At   - E_out_at)
-         error_Atp[n] = Ha_to_eV*np.abs(E_Atp  - E_out_atp)
-         error_Atn[n] = Ha_to_eV*np.abs(E_Atn  - E_out_atn)
+	 
+	 for i in range(len(E_At2)+len(E_HAt)):
+         	errors[n]  = np.abs(E_At2[i]  - E_out_at2[i]) 
+         	errors[n]  = np.abs(E_HAt[i]  - E_out_hat[i]) 
+	 for i in range(len(E_At2)):
+         	error_At2[n,i]  = Ha_to_eV*np.abs(E_At2[i]   - E_out_at2[i])
+	 for i in range(len(E_HAt)):
+         	error_HAt[n,i]  = Ha_to_eV*np.abs(E_HAt[i]   - E_out_hat[i])
+#         error_Atp[n] = Ha_to_eV*np.abs(E_Atp  - E_out_atp)
+#         error_Atn[n] = Ha_to_eV*np.abs(E_Atn  - E_out_atn)
 
          #errors[n] += np.abs(E_At2 - E_out_at2)
          #errors[n] += np.abs(E_HAt - E_out_hat)
          #errors[n] += np.abs(E_AtI - E_out_ati)    
 
-         errors[n] *= Ha_to_eV/3.0 
+         errors[n] *= Ha_to_eV/(len(E_At2)+len(E_HAt))
 
          #ips[n] = Ha_to_eV*(E_out_atp - E_out_at)
          #eas[n] = Ha_to_eV*(E_out_at - E_out_atn)
