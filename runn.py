@@ -66,8 +66,9 @@ def get_energy(basename):
   
   nwfail = False
   err = process.returncode
-  if err == 0:
+  if err == 0: 
      line = stdout.split()
+     print(line)
      energy = float(line[4])
   else:
      print("NWChem failed %s" % (str(err)))
