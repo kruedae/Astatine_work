@@ -283,7 +283,12 @@ def main():
          #
          #--------------------------------------------------------------------------- 
 
-         if nwfail1 or nwfail2 or nwfail3: #or nwfail4 or nwfail5 or nwfail6:
+#         if nwfail1 or nwfail2 or nwfail3: #or nwfail4 or nwfail5 or nwfail6:
+	 nwtotalfail = False
+	 for nwf in nwfail:
+	    nwtotalfail += nwf
+
+	 if nwtotalfail:
             n_failed += 1 
 
          errors[n]  = np.abs(E_At  - E_out_at) 
