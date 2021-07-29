@@ -20,6 +20,7 @@ def main():
    E_Atp = -262.7419035    # SO HF/uncontracted-cc-pV5Z-PP anion calc. starting from the default guess
    E_At2p = -262.0950157    # SO HF/uncontracted-cc-pV5Z-PP anion calc. starting from the default guess
    E_Atn = -263.1663307    # SO HF/uncontracted-cc-pV5Z-PP anion calc. starting from the default guess
+   E_At_m_calc = [E_At2p, E_Atp, E_At, E_Atn]
    # Put the values of distance and energy
    R_At2 = [2.97842834, 2.77842834, 2.87842834, 3.07842834, 3.17842834 ]
    E_At2 = [-526.1925101, -526.1867749, -526.191208, -526.1916841, -526.1894469]
@@ -58,15 +59,15 @@ def main():
 # CREATE A NEW DIRECTORY FOR EACH CALCULATION (14)
    scratch_dir1      = "/lustre/scratch/kruedae/nwchem/1"
    scratch_dir2      = "/lustre/scratch/kruedae/nwchem/2"
-   scratch_dir3      = "/lustre/scratch/akanane/nwchem/3"
-   scratch_dir4      = "/lustre/scratch/akanane/nwchem/4"
-   scratch_dir5      = "/lustre/scratch/akanane/nwchem/5"
-   scratch_dir6      = "/lustre/scratch/akanane/nwchem/6"
-   scratch_dir7      = "/lustre/scratch/akanane/nwchem/7"
-   scratch_dir8      = "/lustre/scratch/akanane/nwchem/8"
-   scratch_dir9      = "/lustre/scratch/akanane/nwchem/9"
-   scratch_dir10      = "/lustre/scratch/akanane/nwchem/10"
-   scratch_dir11      = "/lustre/scratch/akanane/nwchem/11"
+   scratch_dir3      = "/lustre/scratch/kruedae/nwchem/3"
+   scratch_dir4      = "/lustre/scratch/kruedae/nwchem/4"
+   scratch_dir5      = "/lustre/scratch/kruedae/nwchem/5"
+   scratch_dir6      = "/lustre/scratch/kruedae/nwchem/6"
+   scratch_dir7      = "/lustre/scratch/kruedae/nwchem/7"
+   scratch_dir8      = "/lustre/scratch/kruedae/nwchem/8"
+   scratch_dir9      = "/lustre/scratch/kruedae/nwchem/9"
+   scratch_dir10      = "/lustre/scratch/kruedae/nwchem/10"
+   scratch_dir11      = "/lustre/scratch/kruedae/nwchem/11"
 
    memory     = 32000   # in mb
    xcf        = "pbe0"
@@ -78,6 +79,7 @@ def main():
    At2p_title  = "At+" #added
    At2_title  = "At2"
    HAt_title  = "HAt"
+   At_m_calc_title = [At2p_title, Atp_title, At_title, Atn_title]
 
    At_charge  = 0
    Atn_charge = -1
@@ -86,6 +88,7 @@ def main():
    At2_charge = 0
    HAt_charge = 0
    AtI_charge = 0
+   At_m_calc_title = [At2p_charge, Atp_charge, At_charge, Atn_charge]
 
    At_mult    = 2
    Atn_mult   = 1
@@ -93,6 +96,8 @@ def main():
    At2p_mult   = 4 #added
    At2_mult   = 1
    HAt_mult   = 1
+   At_m_calc_title = [At2p_mult, Atp_mult, At_mult, Atn_mult]
+
    At_geometry = "At   0.0   0.0   0.0"
    At2_geometry= ["At  0.00000000     0.00000000     0.00000000\n At    0.00000000     0.00000000     %f"%(r) for r in R_At2]
    HAt_geometry= ["H  0.00000000     0.00000000     0.00000000\n At    0.00000000     0.00000000     %f"%(r) for r in R_HAt]
@@ -183,8 +188,9 @@ def main():
       fo.write(" Current generation size %d \n"%(n_cur_gen))
 
       errors = np.zeros((n_cur_gen))
-      error_At2  = np.zeros((n_cur_gen, R_At2))
-      error_HAt  = np.zeros((n_cur_gen, R_HAt))
+      error_At2  = np.zeros((n_cur_gen, len(R_At2)))
+      error_HAt  = np.zeros((n_cur_gen, len(R_HAt)))
+      error_At  = np.zeros((n_cur_gen, len(E_At_m_calc)))
       #error_Atp = np.zeros((n_cur_gen))
       #error_Atn = np.zeros((n_cur_gen))
 
@@ -239,9 +245,9 @@ def main():
                                                   HAt_geometry[4], xhf, basenameHAt[4],))
 
          # At2p-Atp-At-Atn (Not finished)
-         p11 = Process(target=runn.run_atom, args=(cal_dir, scratch_dir11, memory, bas, 
-                                                  At_pp, At_title, At_charge, At_mult, 
-                                                  At_geometry[10], xhf, basenameAt,))
+         p11 = Process(target=runn.run_many_calc_atom, args=(cal_dir, scratch_dir11, memory, bas, 
+                                                  At_pp, At_m_calc_title, At_m_calc_charge, At_m_calc_mult, 
+                                                  At_geometry, xhf, basenameAt,))
          #                                        basenameAtI,))
 
          p1.start()
@@ -254,6 +260,7 @@ def main():
          p8.start()
          p9.start()
          p10.start()
+         p11.start()
          
          p1.join()
          p2.join()
@@ -265,6 +272,7 @@ def main():
          p8.join()
          p9.join()
          p10.join()
+         p11.join()
 	 
 	 E_out_at2 = [] 
 	 E_out_hat = [] 
@@ -277,6 +285,7 @@ def main():
 		E_outi, nwfaili = runn.get_energy(basenameHAt[i])
 	 	E_out_hat.append(E_outi)
 	 	nwfail.append(nwfaili)
+         E_out_at_m_calc, nwfail_m_calc = runn.get_energy_many_calc(basenameAt)
          #E_out_at2, nwfail4 = runn.get_energy(basenameAt2)
          #E_out_hat, nwfail5 = runn.get_energy(basenameHAt)
          #E_out_ati, nwfail6 = runn.get_energy(basenameAtI)
@@ -289,7 +298,7 @@ def main():
 	 for nwf in nwfail:
 	    nwtotalfail += nwf
 
-	 if nwtotalfail:
+	 if nwtotalfail or nwfail_m_calc:
             n_failed += 1 
 	 
 	 for i in range(len(E_At2)+len(E_HAt)):
