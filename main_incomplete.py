@@ -20,15 +20,12 @@ def main():
    E_Atp = -262.7419035    # SO HF/uncontracted-cc-pV5Z-PP anion calc. starting from the default guess
    E_At2p = -262.0950157    # SO HF/uncontracted-cc-pV5Z-PP anion calc. starting from the default guess
    E_Atn = -263.1663307    # SO HF/uncontracted-cc-pV5Z-PP anion calc. starting from the default guess
-   E_At_m_calc = np.array([E_At2p, E_Atp, E_At, E_Atn])
+   E_At_m_calc = [E_At2p, E_Atp, E_At, E_Atn]
    # Put the values of distance and energy
    R_At2 = [2.97842834, 2.77842834, 2.87842834, 3.07842834, 3.17842834 ]
-   E_At2 = np.array([-526.1925101, -526.1867749, -526.191208, -526.1916841, -526.1894469])
+   E_At2 = [-526.1925101, -526.1867749, -526.191208, -526.1916841, -526.1894469]
    R_HAt = [1.5237857, 1.6237857, 1.7237857, 1.8237857, 1.9237857]
-   E_HAt = np.array([-263.6547155, -263.6666387, -263.670009, -263.6677744, -263.6619657])
-   N_At = len(E_At_m_calc)
-   N_At2 = len(E_At2)
-   N_HAt = len(E_HAt)
+   E_HAt = [-263.6547155, -263.6666387, -263.670009, -263.6677744, -263.6619657]
    #At_EA = 2.412
    #At_IP = 9.31751
    # Use parser function to write in console (review)
@@ -59,9 +56,18 @@ def main():
 
    cal_dir          = os.getcwd()
    # Create scratch directories to perform the calculations
+# CREATE A NEW DIRECTORY FOR EACH CALCULATION (14)
    scratch_dir1      = "/lustre/scratch/kruedae/nwchem/1"
    scratch_dir2      = "/lustre/scratch/kruedae/nwchem/2"
    scratch_dir3      = "/lustre/scratch/kruedae/nwchem/3"
+   scratch_dir4      = "/lustre/scratch/kruedae/nwchem/4"
+   scratch_dir5      = "/lustre/scratch/kruedae/nwchem/5"
+   scratch_dir6      = "/lustre/scratch/kruedae/nwchem/6"
+   scratch_dir7      = "/lustre/scratch/kruedae/nwchem/7"
+   scratch_dir8      = "/lustre/scratch/kruedae/nwchem/8"
+   scratch_dir9      = "/lustre/scratch/kruedae/nwchem/9"
+   scratch_dir10      = "/lustre/scratch/kruedae/nwchem/10"
+   scratch_dir11      = "/lustre/scratch/kruedae/nwchem/11"
 
    memory     = 32000   # in mb
    xcf        = "pbe0"
@@ -71,9 +77,9 @@ def main():
    Atn_title  = "At-"
    Atp_title  = "At+"
    At2p_title  = "At+" #added
+   At2_title  = "At2"
+   HAt_title  = "HAt"
    At_m_calc_title = [At2p_title, Atp_title, At_title, Atn_title]
-   At2_m_calc_title = ["At2_%f"%(r) for r in R_At2]
-   HAt_m_calc_title = ["HAt_%f"%(r) for r in R_HAt]
 
    At_charge  = 0
    Atn_charge = -1
@@ -82,9 +88,7 @@ def main():
    At2_charge = 0
    HAt_charge = 0
    AtI_charge = 0
-   At_m_calc_charge = [At2p_charge, Atp_charge, At_charge, Atn_charge]
-   At2_m_calc_charge = [At2_charge for l in range(len(R_At2))]
-   HAt_m_calc_charge = [HAt_charge for l in range(len(R_HAt))]
+   At_m_calc_title = [At2p_charge, Atp_charge, At_charge, Atn_charge]
 
    At_mult    = 2
    Atn_mult   = 1
@@ -92,17 +96,18 @@ def main():
    At2p_mult   = 4 #added
    At2_mult   = 1
    HAt_mult   = 1
-   At_m_calc_mult = [At2p_mult, Atp_mult, At_mult, Atn_mult]
-   At2_m_calc_mult = [At2_charge for l in range(len(R_At2))]
-   HAt_m_calc_mult = [HAt_charge for l in range(len(R_HAt))]
+   At_m_calc_title = [At2p_mult, Atp_mult, At_mult, Atn_mult]
 
-   At_geometry = ["At   0.0   0.0   0.0" for l in range(len(At_m_calc_title))]
+   At_geometry = "At   0.0   0.0   0.0"
    At2_geometry= ["At  0.00000000     0.00000000     0.00000000\n At    0.00000000     0.00000000     %f"%(r) for r in R_At2]
    HAt_geometry= ["H  0.00000000     0.00000000     0.00000000\n At    0.00000000     0.00000000     %f"%(r) for r in R_HAt]
    # basename for the files
-   basenameAt  = "nwcat"
-   basenameAt2 = "nwcat2"
-   basenameHAt = "nwchat"
+   basenameAt  = "nwc"
+   basenameAtp = "nwcp"
+   basenameAt2p = "nwc2p"
+   basenameAtn = "nwcn"
+   basenameAt2 = ["nwcd%s"%(r) for r in np.arange(len(R_At2))]
+   basenameHAt = ["nwchat%s"%(r) for r in np.arange(len(R_HAt))]
   
    emin = 1e20
    gens = -1
@@ -116,6 +121,22 @@ def main():
       os.mkdir(scratch_dir2)
    if not os.path.exists(scratch_dir3):
       os.mkdir(scratch_dir3)
+   if not os.path.exists(scratch_dir4):
+      os.mkdir(scratch_dir4)
+   if not os.path.exists(scratch_dir5):
+      os.mkdir(scratch_dir5)
+   if not os.path.exists(scratch_dir6):
+      os.mkdir(scratch_dir6)
+   if not os.path.exists(scratch_dir7):
+      os.mkdir(scratch_dir7)
+   if not os.path.exists(scratch_dir8):
+      os.mkdir(scratch_dir8)
+   if not os.path.exists(scratch_dir9):
+      os.mkdir(scratch_dir9)
+   if not os.path.exists(scratch_dir10):
+      os.mkdir(scratch_dir10)
+   if not os.path.exists(scratch_dir11):
+      os.mkdir(scratch_dir11)
 
    out_file_name = "ga.out"
    fo = open(out_file_name, "w")
@@ -167,9 +188,9 @@ def main():
       fo.write(" Current generation size %d \n"%(n_cur_gen))
 
       errors = np.zeros((n_cur_gen))
-      error_At  = np.zeros((n_cur_gen,N_At))
-      error_At2  = np.zeros((n_cur_gen,N_At2))
-      error_HAt  = np.zeros((n_cur_gen, N_HAt))
+      error_At2  = np.zeros((n_cur_gen, len(R_At2)))
+      error_HAt  = np.zeros((n_cur_gen, len(R_HAt)))
+      error_At  = np.zeros((n_cur_gen, len(E_At_m_calc)))
       #error_Atp = np.zeros((n_cur_gen))
       #error_Atn = np.zeros((n_cur_gen))
 
@@ -181,57 +202,120 @@ def main():
          # 
          # run NWChem calculations for all individuals in this generation
          # 
-         # Atp-Atp-At-At 
-         p1 = Process(target=runn.run_many_calc_atom, args=(cal_dir, scratch_dir1, memory, bas, 
+         # At2 
+         p1 = Process(target=runn.run_atom, args=(cal_dir, scratch_dir1, memory, bas, 
+                                                  At_pp, At2_title, At2_charge, A2_mult, 
+                                                  At2_geometry[0], xhf, basenameAt2[0],))
+
+         p2 = Process(target=runn.run_atom, args=(cal_dir, scratch_dir2, memory, bas, 
+                                                  At_pp, At2_title, At2_charge, At2_mult, 
+                                                  At2_geometry[1], xhf, basenameAt2[1],))
+
+         p3 = Process(target=runn.run_atom, args=(cal_dir, scratch_dir3, memory, bas, 
+                                                  At_pp, At2_title, At2_charge, At2_mult, 
+                                                  At2_geometry[2], xhf, basenameAt2[2],))
+
+         p4 = Process(target=runn.run_atom, args=(cal_dir, scratch_dir4, memory, bas, 
+                                                  At_pp, At2_title, At2_charge, At2_mult, 
+                                                  At2_geometry[3], xhf, basenameAt2[3],))
+
+         p5 = Process(target=runn.run_atom, args=(cal_dir, scratch_dir5, memory, bas, 
+                                                  At_pp, At2_title, At2_charge, At2_mult, 
+                                                  At2_geometry[4], xhf, basenameAt2[4],))
+
+         # HAt 
+         p6 = Process(target=runn.run_atom, args=(cal_dir, scratch_dir6, memory, bas, 
+                                                  At_pp, HAt_title, HAt_charge, HAt_mult, 
+                                                  HAt_geometry[0], xhf, basenameHAt[0],))
+
+         p7 = Process(target=runn.run_atom, args=(cal_dir, scratch_dir7, memory, bas, 
+                                                  At_pp, HAt_title, HAt_charge, HAt_mult, 
+                                                  HAt_geometry[1], xhf, basenameHAt[1],))
+
+         p8 = Process(target=runn.run_atom, args=(cal_dir, scratch_dir8, memory, bas, 
+                                                  At_pp, HAt_title, HAt_charge, HAt_mult, 
+                                                  HAt_geometry[2], xhf, basenameHAt[2],))
+
+         p9 = Process(target=runn.run_atom, args=(cal_dir, scratch_dir9, memory, bas, 
+                                                  At_pp, HAt_title, HAt_charge, HAt_mult, 
+                                                  HAt_geometry[3], xhf, basenameHAt[3],))
+
+         p10 = Process(target=runn.run_atom, args=(cal_dir, scratch_dir10, memory, bas, 
+                                                  At_pp, HAt_title, HAt_charge, HAt_mult, 
+                                                  HAt_geometry[4], xhf, basenameHAt[4],))
+
+         # At2p-Atp-At-Atn (Not finished)
+         p11 = Process(target=runn.run_many_calc_atom, args=(cal_dir, scratch_dir11, memory, bas, 
                                                   At_pp, At_m_calc_title, At_m_calc_charge, At_m_calc_mult, 
                                                   At_geometry, xhf, basenameAt,))
-	 # At2
-         p2 = Process(target=runn.run_many_calc_atom, args=(cal_dir, scratch_dir2, memory, bas, 
-                                                  At_pp, At2_m_calc_title, At2_m_calc_charge, At2_m_calc_mult, 
-                                                  At2_geometry, xhf, basenameAt2,))
-
-	# HAt
-         p3 = Process(target=runn.run_many_calc_mol, args=(cal_dir, scratch_dir3, memory, bas, 
-                                                  At_pp, HAt_m_calc_title, HAt_m_calc_charge, HAt_m_calc_mult, 
-                                                  HAt_geometry, xhf, basenameHAt,H_basis))
-
-
+         #                                        basenameAtI,))
 
          p1.start()
          p2.start()
          p3.start()
+         p4.start()
+         p5.start()
+         p6.start()
+         p7.start()
+         p8.start()
+         p9.start()
+         p10.start()
+         p11.start()
          
          p1.join()
          p2.join()
          p3.join()
-
+         p4.join()
+         p5.join()
+         p6.join()
+         p7.join()
+         p8.join()
+         p9.join()
+         p10.join()
+         p11.join()
 	 
-         E_out_at_m_calc, nwfail1 = runn.get_energy_many_calc(basenameAt, N_At)
-         E_out_at2_m_calc, nwfail3 = runn.get_energy_many_calc(basenameAt2, N_At2)
-         E_out_hat_m_calc, nwfail2 = runn.get_energy_many_calc(basenameHAt, N_HAt)
+	 E_out_at2 = [] 
+	 E_out_hat = [] 
+	 nwfail = [] 
+	 for i in range (len(R_At2)):
+		E_outi, nwfaili = runn.get_energy(basenameAt2[i])
+	 	E_out_at2.append(E_outi)
+	 	nwfail.append(nwfaili)
+	 for i in range (len(R_HAt)):
+		E_outi, nwfaili = runn.get_energy(basenameHAt[i])
+	 	E_out_hat.append(E_outi)
+	 	nwfail.append(nwfaili)
+         E_out_at_m_calc, nwfail_m_calc = runn.get_energy_many_calc(basenameAt)
+         #E_out_at2, nwfail4 = runn.get_energy(basenameAt2)
+         #E_out_hat, nwfail5 = runn.get_energy(basenameHAt)
+         #E_out_ati, nwfail6 = runn.get_energy(basenameAtI)
 
-	 E_out_at_m_calc = np.array(E_out_at_m_calc)	
-	 E_out_at2_m_calc = np.array(E_out_at2_m_calc)	
-	 E_out_hat_m_calc = np.array(E_out_hat_m_calc)	
+         #
          #--------------------------------------------------------------------------- 
 
-         if nwfail1 or nwfail2 or nwfail3: #or nwfail4 or nwfail5 or nwfail6:
-	 	n_failed += 1
-	 errors[n] = np.sum(abs(E_out_at_m_calc-E_At_m_calc))
-	 errors[n] += np.sum(abs(E_out_at2_m_calc-E_At2))
-	 errors[n] += np.sum(abs(E_out_hat_m_calc-E_HAt))
+#         if nwfail1 or nwfail2 or nwfail3: #or nwfail4 or nwfail5 or nwfail6:
+	 nwtotalfail = False
+	 for nwf in nwfail:
+	    nwtotalfail += nwf
+
+	 if nwtotalfail or nwfail_m_calc:
+            n_failed += 1 
 	 
+	 for i in range(len(E_At2)+len(E_HAt)):
+         	errors[n]  = np.abs(E_At2[i]  - E_out_at2[i]) 
+         	errors[n]  = np.abs(E_HAt[i]  - E_out_hat[i]) 
+	 for i in range(len(E_At2)):
+         	error_At2[n,i]  = Ha_to_eV*np.abs(E_At2[i]   - E_out_at2[i])
+	 for i in range(len(E_HAt)):
+         	error_HAt[n,i]  = Ha_to_eV*np.abs(E_HAt[i]   - E_out_hat[i])
 #         error_Atp[n] = Ha_to_eV*np.abs(E_Atp  - E_out_atp)
 #         error_Atn[n] = Ha_to_eV*np.abs(E_Atn  - E_out_atn)
 
-	 error_At[n] = Ha_to_eV*abs(E_out_at_m_calc-E_At2)
-	 error_At2[n] = Ha_to_eV*abs(E_out_at2_m_calc-E_At2)
-	 error_HAt[n] = Ha_to_eV*abs(E_out_hat_m_calc-E_At2)
          #errors[n] += np.abs(E_At2 - E_out_at2)
          #errors[n] += np.abs(E_HAt - E_out_hat)
          #errors[n] += np.abs(E_AtI - E_out_ati)    
 
-         errors[n] *= Ha_to_eV/(N_At+N_At2+N_HAt)
+         errors[n] *= Ha_to_eV/(len(E_At2)+len(E_HAt))
 
          #ips[n] = Ha_to_eV*(E_out_atp - E_out_at)
          #eas[n] = Ha_to_eV*(E_out_at - E_out_atn)
@@ -284,9 +368,8 @@ def main():
       fo.write(" Going into the tournament stage : %d \n"%(n_tourn))
 
       fo.write(" Best performing basis in this generation gives the error of %10.7f [eV] \n"%(errors[ind[0]]))
-      fo.write(" Individual errors: At++ = %10.7f , At+ = %10.7f , At = %10.7f , At- = %10.7f [eV] \n"%(error_At[ind[0],0], error_At[ind[0],1], error_At[ind[0],2], error_At[ind[0],3]))
-      fo.write(" Individual errors: At2 = %10.7f , %10.7f , %10.7f , %10.7f , %10.7f [eV] \n"%(error_At2[ind[0],0], error_At2[ind[0],1], error_At2[ind[0],2], error_At2[ind[0],3], error_At2[ind[0],4]))
-      fo.write(" Individual errors: HAt = %10.7f , %10.7f , %10.7f , %10.7f , %10.7f [eV] \n"%(error_HAt[ind[0],0], error_HAt[ind[0],1], error_HAt[ind[0],2], error_HAt[ind[0],3], error_HAt[ind[0],4]))
+      fo.write(" Individual errors: At = %10.7f , At+ = %10.7f , At- = %10.7f [eV] \n"%(error_At[ind[0]], error_Atp[ind[0]], error_Atn[ind[0]]))
+
       #fo.write(" IP = %7.5f [eV], EA = %7.5f [eV] \n"%(ips[ind[0]], eas[ind[0]]))
       #fo.write(" Error in IP w.r.t. experiment = %7.5f [eV] \n"%(ips[ind[0]] - At_IP))
       #fo.write(" Error in EA w.r.t. PRA 91, 020501 (2015) = %7.5f [eV] \n"%(eas[ind[0]] - At_EA))

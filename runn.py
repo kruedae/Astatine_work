@@ -92,6 +92,10 @@ def run_mol(calc_dir, temp_dir, memory, basis, basis2, pp, title, charge, mult, 
   write_nw_input_file(calc_dir, temp_dir, memory, basis, pp, title, charge, mult, geometry, xcf, basename, extra_basis=basis2) 
   run_nwchem(basename) 
   
+def run_many_cal_mol(calc_dir, temp_dir, memory, basis, pp, title, charge, mult, geometry, xcf, basename):
+
+  write_many_calc_nw_input_file(calc_dir, temp_dir, memory, basis, pp, title, charge, mult, geometry, xcf, basename) 
+  run_nwchem(basename) 
   
 def write_many_calc_nw_input_file(calc_dir, temp_dir, memory, basis, pp, title, charge, mult, geometry, xcf, basename, extra_basis=None):
 
@@ -147,7 +151,7 @@ def write_many_calc_nw_input_file(calc_dir, temp_dir, memory, basis, pp, title, 
 
 
 
-def get_energy_many_calc(basename):
+def get_energy_many_calc(basename, N):
 
   s = "grep 'Total SO-DFT' " + basename + ".out"
   process = Popen(s, shell=True, stdout=PIPE)
@@ -159,11 +163,11 @@ def get_energy_many_calc(basename):
   if err == 0: 
      line = stdout.split()
      print(line)
-     for i in range(4):
+     for i in range(N):
      		energy.append(float(line[4+3*i]))
   else:
      print("NWChem failed %s" % (str(err)))
-     for i in range(4):
+     for i in range(N):
      		energy.append(-1e10)
      nwfail = True
 
