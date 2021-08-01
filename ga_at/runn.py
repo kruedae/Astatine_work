@@ -53,6 +53,7 @@ def write_nw_input_file(calc_dir, temp_dir, memory, basis, pp, title, charge, mu
 
 def run_nwchem(basename):
 
+   #s = "mpirun -np 16 nwchem " + basename + ".nw > " + basename + ".out"
    s = "nwchem " + basename + ".nw > " + basename + ".out"
    os.system(s)
    s = "rm " + basename + ".{movecs,db,evals}"
@@ -164,7 +165,7 @@ def get_energy_many_calc(basename, N):
      line = stdout.split()
      print(line)
      for i in range(N):
-     		energy.append(float(line[4+3*i]))
+     		energy.append(float(line[4+5*i]))
   else:
      print("NWChem failed %s" % (str(err)))
      for i in range(N):

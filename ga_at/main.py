@@ -98,7 +98,8 @@ def main():
    At2_m_calc_mult = [At2_mult for l in range(len(R_At2))]
    HAt_m_calc_mult = [HAt_mult for l in range(len(R_HAt))]
 
-   At_geometry = ["At   0.0   0.0   0.0" for l in range(len(At_m_calc_title))]
+   #At_geometry = ["At   0.0   0.0   0.0" for l in range(len(At_m_calc_title))]
+   At_geometry = ["At   .10000000   0.0   0.0", "At   0.0   0.0   0.0","At   .10000000   0.0   0.0","At   0.0   0.0   0.0"]
    At2_geometry= ["At  0.00000000     0.00000000     0.00000000\n At    0.00000000     0.00000000     %f"%(r) for r in R_At2]
    HAt_geometry= ["H  0.00000000     0.00000000     0.00000000\n At    0.00000000     0.00000000     %f"%(r) for r in R_HAt]
    # basename for the files
@@ -226,9 +227,9 @@ def main():
 #         error_Atp[n] = Ha_to_eV*np.abs(E_Atp  - E_out_atp)
 #         error_Atn[n] = Ha_to_eV*np.abs(E_Atn  - E_out_atn)
 
-	 error_At[n] = Ha_to_eV*abs(E_out_at_m_calc-E_At2)
+	 error_At[n] = Ha_to_eV*abs(E_out_at_m_calc-E_At_m_calc)
 	 error_At2[n] = Ha_to_eV*abs(E_out_at2_m_calc-E_At2)
-	 error_HAt[n] = Ha_to_eV*abs(E_out_hat_m_calc-E_At2)
+	 error_HAt[n] = Ha_to_eV*abs(E_out_hat_m_calc-E_HAt)
          #errors[n] += np.abs(E_At2 - E_out_at2)
          #errors[n] += np.abs(E_HAt - E_out_hat)
          #errors[n] += np.abs(E_AtI - E_out_ati)    

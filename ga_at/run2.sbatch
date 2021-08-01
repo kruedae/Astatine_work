@@ -14,6 +14,6 @@
 vpkg_require nwchem/6.8.1
 . /opt/shared/slurm/templates/libexec/openmpi.sh
 
-mpirun -np 16 nwchem nwchat.nw > testing2.out
+mpirun -np 16 nwchem nwchat.nw > testinghat.out
 
 
