@@ -3,11 +3,11 @@ Adding dependency `openmpi/4.0.2` to your environment
 Adding dependency `intel-mkl/2019u5` to your environment
 Adding dependency `python/2.7.15` to your environment
 Adding package `nwchem/6.8.1` to your environment
--- Open MPI job setup complete (on r04n62):
+-- Open MPI job setup complete (on r03n56):
 --  mpi job startup      = /opt/shared/openmpi/4.0.2/bin/mpirun
---  nhosts               = 2
---  nproc                = 18
---  nproc-per-node       = 17,1
+--  nhosts               = 1
+--  nproc                = 12
+--  nproc-per-node       = 12
 --  cpus-per-proc        = 1
 
 -- Open MPI environment flags:
@@ -20,26 +20,34 @@ Adding package `nwchem/6.8.1` to your environment
 --  OMPI_MCA_rmaps_base_mapping_policy=core
 
 FLAG 1
-['Total', 'SO-DFT', 'energy', '=', '-262.051531697289', 'Total', 'SO-DFT', 'energy', '=', '-262.698520200509', 'Total', 'SO-DFT', 'energy', '=', '-263.037928686956', 'Total', 'SO-DFT', 'energy', '=', '-263.123054839165']
-['Total', 'SO-DFT', 'energy', '=', '-526.106303697501', 'Total', 'SO-DFT', 'energy', '=', '-526.101208778291', 'Total', 'SO-DFT', 'energy', '=', '-526.105268992329', 'Total', 'SO-DFT', 'energy', '=', '-526.105287726154', 'Total', 'SO-DFT', 'energy', '=', '-526.102915697546']
-['Total', 'SO-DFT', 'energy', '=', '-263.611853778244', 'Total', 'SO-DFT', 'energy', '=', '-263.623693206669', 'Total', 'SO-DFT', 'energy', '=', '-263.626957561863', 'Total', 'SO-DFT', 'energy', '=', '-263.624646726835', 'Total', 'SO-DFT', 'energy', '=', '-263.618803056660']
+['Total', 'SO-DFT', 'energy', '=', '-262.051534268759', 'Total', 'SO-DFT', 'energy', '=', '-262.698522599318', 'Total', 'SO-DFT', 'energy', '=', '-263.037930992627', 'Total', 'SO-DFT', 'energy', '=', '-263.123057101192']
+['Total', 'SO-DFT', 'energy', '=', '-526.106307733723', 'Total', 'SO-DFT', 'energy', '=', '-526.101212738370', 'Total', 'SO-DFT', 'energy', '=', '-526.105273015512', 'Total', 'SO-DFT', 'energy', '=', '-526.105291767030', 'Total', 'SO-DFT', 'energy', '=', '-526.102920506285']
+['Total', 'SO-DFT', 'energy', '=', '-263.611856106561', 'Total', 'SO-DFT', 'energy', '=', '-263.623695614017', 'Total', 'SO-DFT', 'energy', '=', '-263.626959977827', 'Total', 'SO-DFT', 'energy', '=', '-263.624649134015', 'Total', 'SO-DFT', 'energy', '=', '-263.618805511792']
 FLAG 1
-['Total', 'SO-DFT', 'energy', '=', '-262.051530105801', 'Total', 'SO-DFT', 'energy', '=', '-262.698519035991', 'Total', 'SO-DFT', 'energy', '=', '-263.037927680900', 'Total', 'SO-DFT', 'energy', '=', '-263.123053865133']
-['Total', 'SO-DFT', 'energy', '=', '-526.106303893779', 'Total', 'SO-DFT', 'energy', '=', '-526.101209393230', 'Total', 'SO-DFT', 'energy', '=', '-526.105269405960', 'Total', 'SO-DFT', 'energy', '=', '-526.105287719646', 'Total', 'SO-DFT', 'energy', '=', '-526.102915475358']
-['Total', 'SO-DFT', 'energy', '=', '-263.611854321502', 'Total', 'SO-DFT', 'energy', '=', '-263.623693112175', 'Total', 'SO-DFT', 'energy', '=', '-263.626957173371', 'Total', 'SO-DFT', 'energy', '=', '-263.624646272428', 'Total', 'SO-DFT', 'energy', '=', '-263.618802643726']
+['Total', 'SO-DFT', 'energy', '=', '-262.051306640768', 'Total', 'SO-DFT', 'energy', '=', '-262.698297910507', 'Total', 'SO-DFT', 'energy', '=', '-263.037708264059', 'Total', 'SO-DFT', 'energy', '=', '-263.122835451396']
+['Total', 'SO-DFT', 'energy', '=', '-526.105869260085', 'Total', 'SO-DFT', 'energy', '=', '-526.100775995538', 'Total', 'SO-DFT', 'energy', '=', '-526.104835312966', 'Total', 'SO-DFT', 'energy', '=', '-526.104852622348', 'Total', 'SO-DFT', 'energy', '=', '-526.102480826524']
+['Total', 'SO-DFT', 'energy', '=', '-263.611639017894', 'Total', 'SO-DFT', 'energy', '=', '-263.623477307153', 'Total', 'SO-DFT', 'energy', '=', '-263.626740224011', 'Total', 'SO-DFT', 'energy', '=', '-263.624428492843', 'Total', 'SO-DFT', 'energy', '=', '-263.618584582813']
 FLAG 1
-['Total', 'SO-DFT', 'energy', '=', '-262.051534268757', 'Total', 'SO-DFT', 'energy', '=', '-262.698522599318', 'Total', 'SO-DFT', 'energy', '=', '-263.037930992627', 'Total', 'SO-DFT', 'energy', '=', '-263.123057101191']
-['Total', 'SO-DFT', 'energy', '=', '-526.106308238896', 'Total', 'SO-DFT', 'energy', '=', '-526.101213246418', 'Total', 'SO-DFT', 'energy', '=', '-526.105273516462', 'Total', 'SO-DFT', 'energy', '=', '-526.105292277294', 'Total', 'SO-DFT', 'energy', '=', '-526.102920231281']
-['Total', 'SO-DFT', 'energy', '=', '-263.611855942984', 'Total', 'SO-DFT', 'energy', '=', '-263.623695372649', 'Total', 'SO-DFT', 'energy', '=', '-263.626959754601', 'Total', 'SO-DFT', 'energy', '=', '-263.624648924652', 'Total', 'SO-DFT', 'energy', '=', '-263.618805302154']
+['Total', 'SO-DFT', 'energy', '=', '-262.051544051131', 'Total', 'SO-DFT', 'energy', '=', '-262.698532585637', 'Total', 'SO-DFT', 'energy', '=', '-263.037941117173', 'Total', 'SO-DFT', 'energy', '=', '-263.123067303037']
+['Total', 'SO-DFT', 'energy', '=', '-526.106327970825', 'Total', 'SO-DFT', 'energy', '=', '-526.101232996287', 'Total', 'SO-DFT', 'energy', '=', '-526.105293261097', 'Total', 'SO-DFT', 'energy', '=', '-526.105312008717', 'Total', 'SO-DFT', 'energy', '=', '-526.102940754758']
+['Total', 'SO-DFT', 'energy', '=', '-263.611866266365', 'Total', 'SO-DFT', 'energy', '=', '-263.623705760523', 'Total', 'SO-DFT', 'energy', '=', '-263.626970114247', 'Total', 'SO-DFT', 'energy', '=', '-263.624659271386', 'Total', 'SO-DFT', 'energy', '=', '-263.618815646092']
 FLAG 1
-['Total', 'SO-DFT', 'energy', '=', '-262.051532213928', 'Total', 'SO-DFT', 'energy', '=', '-262.698520540989', 'Total', 'SO-DFT', 'energy', '=', '-263.037928931770', 'Total', 'SO-DFT', 'energy', '=', '-263.123055037168']
-['Total', 'SO-DFT', 'energy', '=', '-526.106304108496', 'Total', 'SO-DFT', 'energy', '=', '-526.101209110063', 'Total', 'SO-DFT', 'energy', '=', '-526.105269388206', 'Total', 'SO-DFT', 'energy', '=', '-526.105288098855', 'Total', 'SO-DFT', 'energy', '=', '-526.102916098623']
-['Total', 'SO-DFT', 'energy', '=', '-263.611853872296', 'Total', 'SO-DFT', 'energy', '=', '-263.623693301908', 'Total', 'SO-DFT', 'energy', '=', '-263.626957668085', 'Total', 'SO-DFT', 'energy', '=', '-263.624646855862', 'Total', 'SO-DFT', 'energy', '=', '-263.618803233568']
+['Total', 'SO-DFT', 'energy', '=', '-262.051747446679', 'Total', 'SO-DFT', 'energy', '=', '-262.698736952054', 'Total', 'SO-DFT', 'energy', '=', '-263.038145873917', 'Total', 'SO-DFT', 'energy', '=', '-263.123272021507']
+['Total', 'SO-DFT', 'energy', '=', '-526.106735147925', 'Total', 'SO-DFT', 'energy', '=', '-526.101639631160', 'Total', 'SO-DFT', 'energy', '=', '-526.105700182215', 'Total', 'SO-DFT', 'energy', '=', '-526.105719371742', 'Total', 'SO-DFT', 'energy', '=', '-526.103348325389']
+['Total', 'SO-DFT', 'energy', '=', '-263.612068711956', 'Total', 'SO-DFT', 'energy', '=', '-263.623908301743', 'Total', 'SO-DFT', 'energy', '=', '-263.627173134373', 'Total', 'SO-DFT', 'energy', '=', '-263.624862756213', 'Total', 'SO-DFT', 'energy', '=', '-263.619019345514']
 FLAG 1
-['Total', 'SO-DFT', 'energy', '=', '-262.051506441000', 'Total', 'SO-DFT', 'energy', '=', '-262.698495762608', 'Total', 'SO-DFT', 'energy', '=', '-263.037904655456', 'Total', 'SO-DFT', 'energy', '=', '-263.123031070348']
-['Total', 'SO-DFT', 'energy', '=', '-526.106257253465', 'Total', 'SO-DFT', 'energy', '=', '-526.101163178960', 'Total', 'SO-DFT', 'energy', '=', '-526.105222936548', 'Total', 'SO-DFT', 'energy', '=', '-526.105240985473', 'Total', 'SO-DFT', 'energy', '=', '-526.102868733909']
-['Total', 'SO-DFT', 'energy', '=', '-263.611830617131', 'Total', 'SO-DFT', 'energy', '=', '-263.623670142417', 'Total', 'SO-DFT', 'energy', '=', '-263.626934573162', 'Total', 'SO-DFT', 'energy', '=', '-263.624623656079', 'Total', 'SO-DFT', 'energy', '=', '-263.618779805026']
+['Total', 'SO-DFT', 'energy', '=', '-262.051648453219', 'Total', 'SO-DFT', 'energy', '=', '-262.698641164377', 'Total', 'SO-DFT', 'energy', '=', '-263.038051715458', 'Total', 'SO-DFT', 'energy', '=', '-263.123178921639']
+['Total', 'SO-DFT', 'energy', '=', '-526.106553359434', 'Total', 'SO-DFT', 'energy', '=', '-526.101461101038', 'Total', 'SO-DFT', 'energy', '=', '-526.105519835832', 'Total', 'SO-DFT', 'energy', '=', '-526.105536448914', 'Total', 'SO-DFT', 'energy', '=', '-526.103164529156']
+['Total', 'SO-DFT', 'energy', '=', '-263.611977957694', 'Total', 'SO-DFT', 'energy', '=', '-263.623817927631', 'Total', 'SO-DFT', 'energy', '=', '-263.627083068374', 'Total', 'SO-DFT', 'energy', '=', '-263.624772399937', 'Total', 'SO-DFT', 'energy', '=', '-263.618928275404']
 FLAG 1
-['Total', 'SO-DFT', 'energy', '=', '-262.051530582304', 'Total', 'SO-DFT', 'energy', '=', '-262.698519502852', 'Total', 'SO-DFT', 'energy', '=', '-263.037928142879', 'Total', 'SO-DFT', 'energy', '=', '-263.123054332310']
-['Total', 'SO-DFT', 'energy', '=', '-526.106303798732', 'Total', 'SO-DFT', 'energy', '=', '-526.101209124779', 'Total', 'SO-DFT', 'energy', '=', '-526.105269214721', 'Total', 'SO-DFT', 'energy', '=', '-526.105287718294', 'Total', 'SO-DFT', 'energy', '=', '-526.102915560455']
-['Total', 'SO-DFT', 'energy', '=', '-263.611854652542', 'Total', 'SO-DFT', 'energy', '=', '-263.623693475088', 'Total', 'SO-DFT', 'energy', '=', '-263.626957550872', 'Total', 'SO-DFT', 'energy', '=', '-263.624646676963', 'Total', 'SO-DFT', 'energy', '=', '-263.618803059637']
+['Total', 'SO-DFT', 'energy', '=', '-262.051433681071', 'Total', 'SO-DFT', 'energy', '=', '-262.698419914303', 'Total', 'SO-DFT', 'energy', '=', '-263.037826886489', 'Total', 'SO-DFT', 'energy', '=', '-263.122952200051']
+['Total', 'SO-DFT', 'energy', '=', '-526.106099642938', 'Total', 'SO-DFT', 'energy', '=', '-526.101004435087', 'Total', 'SO-DFT', 'energy', '=', '-526.105064825260', 'Total', 'SO-DFT', 'energy', '=', '-526.105083798872', 'Total', 'SO-DFT', 'energy', '=', '-526.102712650636']
+['Total', 'SO-DFT', 'energy', '=', '-263.611751638450', 'Total', 'SO-DFT', 'energy', '=', '-263.623591352116', 'Total', 'SO-DFT', 'energy', '=', '-263.626855764248', 'Total', 'SO-DFT', 'energy', '=', '-263.624544900718', 'Total', 'SO-DFT', 'energy', '=', '-263.618701307061']
+FLAG 1
+['Total', 'SO-DFT', 'energy', '=', '-262.051471974786', 'Total', 'SO-DFT', 'energy', '=', '-262.698461050133', 'Total', 'SO-DFT', 'energy', '=', '-263.037869854518', 'Total', 'SO-DFT', 'energy', '=', '-263.122996171313']
+['Total', 'SO-DFT', 'energy', '=', '-526.106185814988', 'Total', 'SO-DFT', 'energy', '=', '-526.101091175838', 'Total', 'SO-DFT', 'energy', '=', '-526.105151240075', 'Total', 'SO-DFT', 'energy', '=', '-526.105169763232', 'Total', 'SO-DFT', 'energy', '=', '-526.102798426762']
+['Total', 'SO-DFT', 'energy', '=', '-263.611795652802', 'Total', 'SO-DFT', 'energy', '=', '-263.623635166197', 'Total', 'SO-DFT', 'energy', '=', '-263.626899472572', 'Total', 'SO-DFT', 'energy', '=', '-263.624588492364', 'Total', 'SO-DFT', 'energy', '=', '-263.618744692128']
+FLAG 1
+['Total', 'SO-DFT', 'energy', '=', '-262.051306675804', 'Total', 'SO-DFT', 'energy', '=', '-262.698297918253', 'Total', 'SO-DFT', 'energy', '=', '-263.037708299514', 'Total', 'SO-DFT', 'energy', '=', '-263.122835451396']
+['Total', 'SO-DFT', 'energy', '=', '-526.105869266364', 'Total', 'SO-DFT', 'energy', '=', '-526.100775714809', 'Total', 'SO-DFT', 'energy', '=', '-526.104835199113', 'Total', 'SO-DFT', 'energy', '=', '-526.104852736860', 'Total', 'SO-DFT', 'energy', '=', '-526.102480914930']
+['Total', 'SO-DFT', 'energy', '=', '-263.611638047571', 'Total', 'SO-DFT', 'energy', '=', '-263.623476865423', 'Total', 'SO-DFT', 'energy', '=', '-263.626740088823', 'Total', 'SO-DFT', 'energy', '=', '-263.624428420370', 'Total', 'SO-DFT', 'energy', '=', '-263.618584493908']

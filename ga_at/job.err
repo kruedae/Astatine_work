@@ -4,7 +4,7 @@ are not used by default.  The intent is to use UCX for these devices.
 You can override this policy by setting the btl_openib_allow_ib MCA parameter
 to true.
 
-  Local host:              r04n62
+  Local host:              r03n56
   Local adapter:           hfi1_0
   Local port:              1
 
@@ -15,7 +15,7 @@ are not used by default.  The intent is to use UCX for these devices.
 You can override this policy by setting the btl_openib_allow_ib MCA parameter
 to true.
 
-  Local host:              r04n62
+  Local host:              r03n56
   Local adapter:           hfi1_0
   Local port:              1
 
@@ -26,7 +26,7 @@ are not used by default.  The intent is to use UCX for these devices.
 You can override this policy by setting the btl_openib_allow_ib MCA parameter
 to true.
 
-  Local host:              r04n62
+  Local host:              r03n56
   Local adapter:           hfi1_0
   Local port:              1
 
@@ -34,19 +34,52 @@ to true.
 --------------------------------------------------------------------------
 WARNING: There was an error initializing an OpenFabrics device.
 
-  Local host:   r04n62
+  Local host:   r03n56
   Local device: hfi1_0
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 WARNING: There was an error initializing an OpenFabrics device.
 
-  Local host:   r04n62
+  Local host:   r03n56
   Local device: hfi1_0
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 WARNING: There was an error initializing an OpenFabrics device.
 
-  Local host:   r04n62
+  Local host:   r03n56
+  Local device: hfi1_0
+--------------------------------------------------------------------------
+[r03n56.localdomain.hpc.udel.edu:88840] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:88840] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:88840] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:88841] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:88838] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:88841] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:88838] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:88841] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:88838] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+--------------------------------------------------------------------------
+By default, for Open MPI 4.0 and later, infiniband ports on a device
+are not used by default.  The intent is to use UCX for these devices.
+You can override this policy by setting the btl_openib_allow_ib MCA parameter
+to true.
+
+  Local host:              r03n56
+  Local adapter:           hfi1_0
+  Local port:              1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   r03n56
+  Local device: hfi1_0
+--------------------------------------------------------------------------
+[r03n56.localdomain.hpc.udel.edu:89790] [[48946,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   r03n56
   Local device: hfi1_0
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
@@ -55,58 +88,7 @@ are not used by default.  The intent is to use UCX for these devices.
 You can override this policy by setting the btl_openib_allow_ib MCA parameter
 to true.
 
-  Local host:              r04n62
-  Local adapter:           hfi1_0
-  Local port:              1
-
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-By default, for Open MPI 4.0 and later, infiniband ports on a device
-are not used by default.  The intent is to use UCX for these devices.
-You can override this policy by setting the btl_openib_allow_ib MCA parameter
-to true.
-
-  Local host:              r04n62
-  Local adapter:           hfi1_0
-  Local port:              1
-
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-WARNING: There was an error initializing an OpenFabrics device.
-
-  Local host:   r04n62
-  Local device: hfi1_0
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-WARNING: There was an error initializing an OpenFabrics device.
-
-  Local host:   r04n62
-  Local device: hfi1_0
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-By default, for Open MPI 4.0 and later, infiniband ports on a device
-are not used by default.  The intent is to use UCX for these devices.
-You can override this policy by setting the btl_openib_allow_ib MCA parameter
-to true.
-
-  Local host:              r04n62
-  Local adapter:           hfi1_0
-  Local port:              1
-
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-WARNING: There was an error initializing an OpenFabrics device.
-
-  Local host:   r04n62
-  Local device: hfi1_0
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-By default, for Open MPI 4.0 and later, infiniband ports on a device
-are not used by default.  The intent is to use UCX for these devices.
-You can override this policy by setting the btl_openib_allow_ib MCA parameter
-to true.
-
-  Local host:              r04n62
+  Local host:              r03n56
   Local adapter:           hfi1_0
   Local port:              1
 
@@ -117,7 +99,7 @@ are not used by default.  The intent is to use UCX for these devices.
 You can override this policy by setting the btl_openib_allow_ib MCA parameter
 to true.
 
-  Local host:              r04n62
+  Local host:              r03n56
   Local adapter:           hfi1_0
   Local port:              1
 
@@ -125,56 +107,27 @@ to true.
 --------------------------------------------------------------------------
 WARNING: There was an error initializing an OpenFabrics device.
 
-  Local host:   r04n62
+  Local host:   r03n56
   Local device: hfi1_0
 --------------------------------------------------------------------------
---------------------------------------------------------------------------
-WARNING: There was an error initializing an OpenFabrics device.
-
-  Local host:   r04n62
-  Local device: hfi1_0
---------------------------------------------------------------------------
+[r03n56.localdomain.hpc.udel.edu:89790] [[48946,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[r03n56.localdomain.hpc.udel.edu:89791] [[48947,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 513
+[r03n56.localdomain.hpc.udel.edu:89791] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:89791] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:89791] 10 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:89789] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:89789] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:89789] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:89790] 10 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:89790] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:89790] 10 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
 --------------------------------------------------------------------------
 By default, for Open MPI 4.0 and later, infiniband ports on a device
 are not used by default.  The intent is to use UCX for these devices.
 You can override this policy by setting the btl_openib_allow_ib MCA parameter
 to true.
 
-  Local host:              r04n62
-  Local adapter:           hfi1_0
-  Local port:              1
-
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-WARNING: There was an error initializing an OpenFabrics device.
-
-  Local host:   r04n62
-  Local device: hfi1_0
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-By default, for Open MPI 4.0 and later, infiniband ports on a device
-are not used by default.  The intent is to use UCX for these devices.
-You can override this policy by setting the btl_openib_allow_ib MCA parameter
-to true.
-
-  Local host:              r04n62
-  Local adapter:           hfi1_0
-  Local port:              1
-
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-WARNING: There was an error initializing an OpenFabrics device.
-
-  Local host:   r04n62
-  Local device: hfi1_0
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-By default, for Open MPI 4.0 and later, infiniband ports on a device
-are not used by default.  The intent is to use UCX for these devices.
-You can override this policy by setting the btl_openib_allow_ib MCA parameter
-to true.
-
-  Local host:              r04n62
+  Local host:              r03n56
   Local adapter:           hfi1_0
   Local port:              1
 
@@ -185,30 +138,7 @@ are not used by default.  The intent is to use UCX for these devices.
 You can override this policy by setting the btl_openib_allow_ib MCA parameter
 to true.
 
-  Local host:              r04n62
-  Local adapter:           hfi1_0
-  Local port:              1
-
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-WARNING: There was an error initializing an OpenFabrics device.
-
-  Local host:   r04n62
-  Local device: hfi1_0
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-WARNING: There was an error initializing an OpenFabrics device.
-
-  Local host:   r04n62
-  Local device: hfi1_0
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-By default, for Open MPI 4.0 and later, infiniband ports on a device
-are not used by default.  The intent is to use UCX for these devices.
-You can override this policy by setting the btl_openib_allow_ib MCA parameter
-to true.
-
-  Local host:              r04n62
+  Local host:              r03n56
   Local adapter:           hfi1_0
   Local port:              1
 
@@ -219,7 +149,7 @@ are not used by default.  The intent is to use UCX for these devices.
 You can override this policy by setting the btl_openib_allow_ib MCA parameter
 to true.
 
-  Local host:              r04n62
+  Local host:              r03n56
   Local adapter:           hfi1_0
   Local port:              1
 
@@ -227,14 +157,40 @@ to true.
 --------------------------------------------------------------------------
 WARNING: There was an error initializing an OpenFabrics device.
 
-  Local host:   r04n62
+  Local host:   r03n56
   Local device: hfi1_0
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 WARNING: There was an error initializing an OpenFabrics device.
 
-  Local host:   r04n62
+  Local host:   r03n56
   Local device: hfi1_0
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   r03n56
+  Local device: hfi1_0
+--------------------------------------------------------------------------
+[r03n56.localdomain.hpc.udel.edu:90749] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:90749] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:90749] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:90747] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:90747] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:90747] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:90748] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:90748] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:90748] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+--------------------------------------------------------------------------
+By default, for Open MPI 4.0 and later, infiniband ports on a device
+are not used by default.  The intent is to use UCX for these devices.
+You can override this policy by setting the btl_openib_allow_ib MCA parameter
+to true.
+
+  Local host:              r03n56
+  Local adapter:           hfi1_0
+  Local port:              1
+
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 By default, for Open MPI 4.0 and later, infiniband ports on a device
@@ -242,24 +198,7 @@ are not used by default.  The intent is to use UCX for these devices.
 You can override this policy by setting the btl_openib_allow_ib MCA parameter
 to true.
 
-  Local host:              r04n62
-  Local adapter:           hfi1_0
-  Local port:              1
-
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-WARNING: There was an error initializing an OpenFabrics device.
-
-  Local host:   r04n62
-  Local device: hfi1_0
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-By default, for Open MPI 4.0 and later, infiniband ports on a device
-are not used by default.  The intent is to use UCX for these devices.
-You can override this policy by setting the btl_openib_allow_ib MCA parameter
-to true.
-
-  Local host:              r04n62
+  Local host:              r03n56
   Local adapter:           hfi1_0
   Local port:              1
 
@@ -270,7 +209,7 @@ are not used by default.  The intent is to use UCX for these devices.
 You can override this policy by setting the btl_openib_allow_ib MCA parameter
 to true.
 
-  Local host:              r04n62
+  Local host:              r03n56
   Local adapter:           hfi1_0
   Local port:              1
 
@@ -278,14 +217,40 @@ to true.
 --------------------------------------------------------------------------
 WARNING: There was an error initializing an OpenFabrics device.
 
-  Local host:   r04n62
+  Local host:   r03n56
   Local device: hfi1_0
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 WARNING: There was an error initializing an OpenFabrics device.
 
-  Local host:   r04n62
+  Local host:   r03n56
   Local device: hfi1_0
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   r03n56
+  Local device: hfi1_0
+--------------------------------------------------------------------------
+[r03n56.localdomain.hpc.udel.edu:91652] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:91651] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:91652] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:91651] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:91652] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:91651] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:91653] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:91653] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:91653] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+--------------------------------------------------------------------------
+By default, for Open MPI 4.0 and later, infiniband ports on a device
+are not used by default.  The intent is to use UCX for these devices.
+You can override this policy by setting the btl_openib_allow_ib MCA parameter
+to true.
+
+  Local host:              r03n56
+  Local adapter:           hfi1_0
+  Local port:              1
+
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 By default, for Open MPI 4.0 and later, infiniband ports on a device
@@ -293,7 +258,18 @@ are not used by default.  The intent is to use UCX for these devices.
 You can override this policy by setting the btl_openib_allow_ib MCA parameter
 to true.
 
-  Local host:              r04n62
+  Local host:              r03n56
+  Local adapter:           hfi1_0
+  Local port:              1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+By default, for Open MPI 4.0 and later, infiniband ports on a device
+are not used by default.  The intent is to use UCX for these devices.
+You can override this policy by setting the btl_openib_allow_ib MCA parameter
+to true.
+
+  Local host:              r03n56
   Local adapter:           hfi1_0
   Local port:              1
 
@@ -301,6 +277,207 @@ to true.
 --------------------------------------------------------------------------
 WARNING: There was an error initializing an OpenFabrics device.
 
-  Local host:   r04n62
+  Local host:   r03n56
   Local device: hfi1_0
 --------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   r03n56
+  Local device: hfi1_0
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   r03n56
+  Local device: hfi1_0
+--------------------------------------------------------------------------
+[r03n56.localdomain.hpc.udel.edu:92826] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:92826] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:92826] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:92824] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:92824] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:92824] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:92825] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:92825] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:92825] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+--------------------------------------------------------------------------
+By default, for Open MPI 4.0 and later, infiniband ports on a device
+are not used by default.  The intent is to use UCX for these devices.
+You can override this policy by setting the btl_openib_allow_ib MCA parameter
+to true.
+
+  Local host:              r03n56
+  Local adapter:           hfi1_0
+  Local port:              1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+By default, for Open MPI 4.0 and later, infiniband ports on a device
+are not used by default.  The intent is to use UCX for these devices.
+You can override this policy by setting the btl_openib_allow_ib MCA parameter
+to true.
+
+  Local host:              r03n56
+  Local adapter:           hfi1_0
+  Local port:              1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+By default, for Open MPI 4.0 and later, infiniband ports on a device
+are not used by default.  The intent is to use UCX for these devices.
+You can override this policy by setting the btl_openib_allow_ib MCA parameter
+to true.
+
+  Local host:              r03n56
+  Local adapter:           hfi1_0
+  Local port:              1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   r03n56
+  Local device: hfi1_0
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   r03n56
+  Local device: hfi1_0
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   r03n56
+  Local device: hfi1_0
+--------------------------------------------------------------------------
+[r03n56.localdomain.hpc.udel.edu:93753] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:93753] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:93753] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:93755] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:93755] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:93755] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:93754] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:93754] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:93754] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+--------------------------------------------------------------------------
+By default, for Open MPI 4.0 and later, infiniband ports on a device
+are not used by default.  The intent is to use UCX for these devices.
+You can override this policy by setting the btl_openib_allow_ib MCA parameter
+to true.
+
+  Local host:              r03n56
+  Local adapter:           hfi1_0
+  Local port:              1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+By default, for Open MPI 4.0 and later, infiniband ports on a device
+are not used by default.  The intent is to use UCX for these devices.
+You can override this policy by setting the btl_openib_allow_ib MCA parameter
+to true.
+
+  Local host:              r03n56
+  Local adapter:           hfi1_0
+  Local port:              1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+By default, for Open MPI 4.0 and later, infiniband ports on a device
+are not used by default.  The intent is to use UCX for these devices.
+You can override this policy by setting the btl_openib_allow_ib MCA parameter
+to true.
+
+  Local host:              r03n56
+  Local adapter:           hfi1_0
+  Local port:              1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   r03n56
+  Local device: hfi1_0
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   r03n56
+  Local device: hfi1_0
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   r03n56
+  Local device: hfi1_0
+--------------------------------------------------------------------------
+[r03n56.localdomain.hpc.udel.edu:94711] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:94711] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:94711] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:94712] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:94712] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:94712] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:94710] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:94710] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:94710] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+--------------------------------------------------------------------------
+By default, for Open MPI 4.0 and later, infiniband ports on a device
+are not used by default.  The intent is to use UCX for these devices.
+You can override this policy by setting the btl_openib_allow_ib MCA parameter
+to true.
+
+  Local host:              r03n56
+  Local adapter:           hfi1_0
+  Local port:              1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+By default, for Open MPI 4.0 and later, infiniband ports on a device
+are not used by default.  The intent is to use UCX for these devices.
+You can override this policy by setting the btl_openib_allow_ib MCA parameter
+to true.
+
+  Local host:              r03n56
+  Local adapter:           hfi1_0
+  Local port:              1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+By default, for Open MPI 4.0 and later, infiniband ports on a device
+are not used by default.  The intent is to use UCX for these devices.
+You can override this policy by setting the btl_openib_allow_ib MCA parameter
+to true.
+
+  Local host:              r03n56
+  Local adapter:           hfi1_0
+  Local port:              1
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   r03n56
+  Local device: hfi1_0
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   r03n56
+  Local device: hfi1_0
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   r03n56
+  Local device: hfi1_0
+--------------------------------------------------------------------------
+[r03n56.localdomain.hpc.udel.edu:95724] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:95724] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:95724] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:95722] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:95722] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:95722] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[r03n56.localdomain.hpc.udel.edu:95723] 11 more processes have sent help message help-mpi-btl-openib.txt / ib port not selected
+[r03n56.localdomain.hpc.udel.edu:95723] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[r03n56.localdomain.hpc.udel.edu:95723] 11 more processes have sent help message help-mpi-btl-openib.txt / error in device init

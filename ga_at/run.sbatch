@@ -1,6 +1,6 @@
 #!/bin/bash -l
-#SBATCH --nodes=2
-#SBATCH --ntasks=18
+#SBATCH --nodes=1
+#SBATCH --ntasks=12
 #SBATCH --job-name=GAprobe
 #SBATCH --partition=akanane
 #SBATCH --time=7-00:00:00

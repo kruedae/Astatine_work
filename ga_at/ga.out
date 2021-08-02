@@ -196,25 +196,26 @@ END
 
  <<<<<<<<<<<<<<<< Beginning of a new generation 1 out of 2 >>>>>>>>>>>>>>>>>>>
 
- Current generation size 3 
- ** idx = 0 error =  1.5923427 [eV] 
- ** idx = 1 error =  1.5923516 [eV] 
- ** idx = 2 error =  1.5922589 [eV] *** this is the original basis. 
+ Current generation size 4 
+ ** idx = 0 error =  1.5922603 [eV] *** this is the original basis. 
+ ** idx = 1 error =  1.6003947 [eV] 
+ ** idx = 2 error =  1.5918870 [eV] 
+ ** idx = 3 error =  1.5843688 [eV] 
 
 
  Done running NWChem calculations. 
 
  Total calculations failed : 0 
- Directly promoted to the next generation : 3 
+ Directly promoted to the next generation : 4 
  Going into the tournament stage : 0 
- Best performing basis in this generation gives the error of  1.5922589 [eV] 
- Individual errors: At++ =  1.1831732 , At+ =  1.1804377 , At =  1.1788705 , At- =  1.1775179 [eV] 
- Individual errors: At2 =  2.3456388 ,  2.3282182 ,  2.3383632 ,  2.3508079 ,  2.3544772 [eV] 
- Individual errors: HAt =  1.1662514 ,  1.1685309 ,  1.1714130 ,  1.1734873 ,  1.1744376 [eV] 
- See file bas_gen0_id2.dat 
- Difference between best and worst performing bases at 0 generation is: -0.0000927 
- 3 lowest error indices are: 
- 2  0  1 
+ Best performing basis in this generation gives the error of  1.5843688 [eV] 
+ Individual errors: At++ =  1.1773724 , At+ =  1.1746049 , At =  1.1730234 , At- =  1.1716697 [eV] 
+ Individual errors: At2 =  2.3340222 ,  2.3166158 ,  2.3267532 ,  2.3391862 ,  2.3428283 [eV] 
+ Individual errors: HAt =  1.1604617 ,  1.1627369 ,  1.1656067 ,  1.1676687 ,  1.1686133 [eV] 
+ See file bas_gen0_id3.dat 
+ Difference between best and worst performing bases at 0 generation is: -0.0160259 
+ 4 lowest error indices are: 
+ 3  2  0  1 
 
 
  0 basis sets are going into the tournament: 
@@ -223,32 +224,33 @@ END
  Tournament ends.
 
  we will now start crossover stage to add 0 more individuals to current generation.
- Mutation parameters sampled from Gamma distribution : probability = 100.00000 % magnitude = 0.74414 % 
+ Mutation parameters sampled from Gamma distribution : probability = 100.00000 % magnitude = 1.91545 % 
  Saving active basis sets to job_save.txt 
 
 
  <<<<<<<<<<<<<<<< Beginning of a new generation 2 out of 2 >>>>>>>>>>>>>>>>>>>
 
- Current generation size 3 
- ** idx = 0 error =  1.5923353 [eV] 
- ** idx = 1 error =  1.5932073 [eV] 
- ** idx = 2 error =  1.5923452 [eV] 
+ Current generation size 4 
+ ** idx = 0 error =  1.5877547 [eV] 
+ ** idx = 1 error =  1.5960972 [eV] 
+ ** idx = 2 error =  1.5945113 [eV] 
+ ** idx = 3 error =  1.6003983 [eV] 
 
 
  Done running NWChem calculations. 
 
  Total calculations failed : 0 
- Directly promoted to the next generation : 3 
+ Directly promoted to the next generation : 4 
  Going into the tournament stage : 0 
- Best performing basis in this generation gives the error of  1.5923353 [eV] 
- Individual errors: At++ =  1.1832291 , At+ =  1.1804937 , At =  1.1789266 , At- =  1.1775741 [eV] 
- Individual errors: At2 =  2.3457512 ,  2.3283307 ,  2.3384756 ,  2.3509216 ,  2.3545896 [eV] 
- Individual errors: HAt =  1.1663078 ,  1.1685872 ,  1.1714698 ,  1.1735436 ,  1.1744939 [eV] 
+ Best performing basis in this generation gives the error of  1.5877547 [eV] 
+ Individual errors: At++ =  1.1800662 , At+ =  1.1772114 , At =  1.1755855 , At- =  1.1742030 [eV] 
+ Individual errors: At2 =  2.3389689 ,  2.3214738 ,  2.3316606 ,  2.3441637 ,  2.3478296 [eV] 
+ Individual errors: HAt =  1.1629313 ,  1.1651960 ,  1.1680575 ,  1.1701274 ,  1.1710914 [eV] 
  See file bas_gen1_id0.dat 
- Difference between best and worst performing bases at 1 generation is: -0.0008720 
- Smallest error has not improved since previous step:  1.5922589 [eV] 
- 3 lowest error indices are: 
- 0  2  1 
+ Difference between best and worst performing bases at 1 generation is: -0.0126435 
+ Smallest error has not improved since previous step:  1.5843688 [eV] 
+ 4 lowest error indices are: 
+ 0  2  1  3 
 
 
  0 basis sets are going into the tournament: 
@@ -257,5 +259,5 @@ END
  Tournament ends.
 
  we will now start crossover stage to add 0 more individuals to current generation.
- Mutation parameters sampled from Gamma distribution : probability = 100.00000 % magnitude = 1.65360 % 
+ Mutation parameters sampled from Gamma distribution : probability = 100.00000 % magnitude = 0.69952 % 
  Saving active basis sets to job_save.txt 

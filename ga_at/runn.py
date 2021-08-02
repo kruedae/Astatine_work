@@ -1,7 +1,7 @@
 from subprocess import Popen, PIPE
 import os
 import sys
-
+import generator
 def write_nw_input_file(calc_dir, temp_dir, memory, basis, pp, title, charge, mult, geometry, xcf, basename, extra_basis=None):
 
    file_name = basename + ".nw"
@@ -53,8 +53,8 @@ def write_nw_input_file(calc_dir, temp_dir, memory, basis, pp, title, charge, mu
 
 def run_nwchem(basename):
 
-   #s = "mpirun -np 16 nwchem " + basename + ".nw > " + basename + ".out"
-   s = "nwchem " + basename + ".nw > " + basename + ".out"
+   s = "mpirun -np 12 nwchem " + basename + ".nw > " + basename + ".out"
+   #s = "nwchem " + basename + ".nw > " + basename + ".out"
    os.system(s)
    s = "rm " + basename + ".{movecs,db,evals}"
    os.system(s)
