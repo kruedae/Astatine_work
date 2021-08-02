@@ -42,9 +42,9 @@ def write_nw_input_file(calc_dir, temp_dir, memory, basis, pp, title, charge, mu
    f.write("mult %d \n"%(mult))
    f.write("odft\n")
    f.write("iterations 100\n")
-   f.write("convergence energy 1.0E-6\n")
-   f.write("convergence density 5.00000E-06\n")
-   f.write("convergence gradient 5.00000E-06\n")
+   f.write("convergence energy 1.0E-9\n") #1.0E-9
+   f.write("convergence density 5.00000E-07\n") #1.0E-7
+   f.write("convergence gradient 5.00000E-07\n") #1.0E-7
    f.write("xc %s  \n"%(xcf))
    f.write("end \n")
    f.write("task sodft ")

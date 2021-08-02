@@ -1,7 +1,7 @@
 {
     "generations"  : 2,
     "population_size" : 4,
-    "save_n_best" : 1,
+    "save_n_best" : 2,
     "fittest_win_probability" : 80.0,
     "job_type" : 0,
     "chk_file" : "job_save.txt",

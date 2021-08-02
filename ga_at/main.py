@@ -22,8 +22,8 @@ def main():
    E_Atn = -263.1663307    # SO HF/uncontracted-cc-pV5Z-PP anion calc. starting from the default guess
    E_At_m_calc = np.array([E_At2p, E_Atp, E_At, E_Atn])
    # Put the values of distance and energy
-   R_At2 = [2.97842834, 2.77842834, 2.87842834, 3.07842834, 3.17842834 ]
-   E_At2 = np.array([-526.1925101, -526.1867749, -526.191208, -526.1916841, -526.1894469])
+   R_At2 = [2.77842834, 2.87842834, 2.97842834, 3.07842834, 3.17842834 ]
+   E_At2 = np.array([-526.1867749, -526.191208, -526.1925101, -526.1916841, -526.1894469])
    R_HAt = [1.5237857, 1.6237857, 1.7237857, 1.8237857, 1.9237857]
    E_HAt = np.array([-263.6547155, -263.6666387, -263.670009, -263.6677744, -263.6619657])
    N_At = len(E_At_m_calc)
@@ -80,7 +80,7 @@ def main():
    At_charge  = 0
    Atn_charge = -1
    Atp_charge = 1
-   At2p_charge = 2 #added
+   At2p_charge = 2
    At2_charge = 0
    HAt_charge = 0
    AtI_charge = 0
@@ -91,7 +91,7 @@ def main():
    At_mult    = 2
    Atn_mult   = 1
    Atp_mult   = 3
-   At2p_mult   = 4 #added
+   At2p_mult   = 4
    At2_mult   = 1
    HAt_mult   = 1
    At_m_calc_mult = [At2p_mult, Atp_mult, At_mult, Atn_mult]
@@ -274,7 +274,7 @@ def main():
       # do some accounting here...
       # 
       n_rem     = n_cur_gen - n_failed
-      n_promote = int(round(n_rem*1.0/save_n_best)) # Q: Why is a cocient?: Save_n_best must to be a coefficient (10 to 1/10, ...)
+      n_promote = int(round(n_rem*1.0-save_n_best)) # Q: Why is a cocient?: Save_n_best must to be a coefficient (10 to 1/10, ...)
       n_tourn   = n_rem - n_promote
 
       if n_tourn % 2 == 1:

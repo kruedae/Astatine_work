@@ -49,7 +49,6 @@ def crossover_float(bas1, bas2):
 
    print (" output bas 1 ",bas_out1)
    print (" output bas 2 ",bas_out2)
-   ddddd
 
    return bas_out1, bas_out2
 
@@ -126,8 +125,14 @@ def mutate_single(bas_in, mag):
   
    # allowing to change not larger than 5%
    dv = mag/100.0
-
-   vo = 2.0*dv*val*np.random.random() + val - val*dv # mutation rule performed at the single value
+   u = np.random.random()
+   n = 1
+   if u < 0.5:
+	delta = (2*u)**(1/(n+1))-1
+   if u >= 0.5:
+	delta = 1-(2*(1-u))**(1/(n+1))
+   #vo = 2.0*dv*val*np.random.random() + val - val*dv # mutation rule performed at the single value
+   vo = val+delta*dv # mutation rule performed at the single value
 
    dd = 100*(vo - val)/val
    #print (" Changing parameter from %10.7f to %10.7f change = %7.5f %%\n"%(val,vo,dd))
