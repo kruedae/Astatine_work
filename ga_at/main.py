@@ -16,10 +16,10 @@ def main():
 
    #------------ Reference data ----------
    Ha_to_eV = 27.211
-   E_At  = -263.0812543    # SO HF/uncontracted-cc-pV5Z-PP atomic calc. starting from anion orbitals
-   E_Atp = -262.7419035    # SO HF/uncontracted-cc-pV5Z-PP anion calc. starting from the default guess
-   E_At2p = -262.0950157    # SO HF/uncontracted-cc-pV5Z-PP anion calc. starting from the default guess
-   E_Atn = -263.1663307    # SO HF/uncontracted-cc-pV5Z-PP anion calc. starting from the default guess
+   E_At  = -263.0812543    
+   E_Atp = -262.7419035    
+   E_At2p = -262.0950157    
+   E_Atn = -263.1663307    
    E_At_m_calc = np.array([E_At2p, E_Atp, E_At, E_Atn])
    # Put the values of distance and energy
    R_At2 = [2.77842834, 2.87842834, 2.97842834, 3.07842834, 3.17842834 ]

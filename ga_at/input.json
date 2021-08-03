@@ -6,7 +6,7 @@
     "job_type" : 0,
     "chk_file" : "job_save.txt",
     "input_basis_file" : "/work/akanane/users/kennet/GA/parallel/ga_at/Astatine_initial_basis.bas",
-    "H_basis_file" : "/work/akanane/users/kennet/GA/parallel/ga_at/H_uccpv5z.bas",
+    "H_basis_file" : "/work/akanane/users/kennet/GA/parallel/ga_at/H_basis.bas",
     "At_pp_file"  : "/work/akanane/users/kennet/GA/parallel/ga_at/At_gatchina.pp",
     "mutation_file" : "mutate.txt",
     "mutation_probability" : 100.0,

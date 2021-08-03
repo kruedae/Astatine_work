@@ -235,27 +235,6 @@ At G
 END
 
 
-title  "At2_2.978428" 
-charge 0.00000 
-
-geometry units angstrom
-symmetry group c1
- At  0.00000000     0.00000000     0.00000000
- At    0.00000000     0.00000000     2.978428 
-end
-
-dft 
-grid xfine
-mult 1 
-odft
-iterations 100
-convergence energy 1.0E-6
-convergence density 5.00000E-06
-convergence gradient 5.00000E-06
-xc pbe0  
-end 
-task sodft 
-
 title  "At2_2.778428" 
 charge 0.00000 
 
@@ -284,6 +263,27 @@ geometry units angstrom
 symmetry group c1
  At  0.00000000     0.00000000     0.00000000
  At    0.00000000     0.00000000     2.878428 
+end
+
+dft 
+grid xfine
+mult 1 
+odft
+iterations 100
+convergence energy 1.0E-6
+convergence density 5.00000E-06
+convergence gradient 5.00000E-06
+xc pbe0  
+end 
+task sodft 
+
+title  "At2_2.978428" 
+charge 0.00000 
+
+geometry units angstrom
+symmetry group c1
+ At  0.00000000     0.00000000     0.00000000
+ At    0.00000000     0.00000000     2.978428 
 end
 
 dft 
